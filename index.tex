@@ -114,62 +114,7 @@ Sus características principales son:
  \item Las relaciones pueden ser sin dirección, unidireccionales y bidireccionales lo que puede convertir la representación a grafos dirigidos, muy útiles en el cálculo de caminos.
  \item Tienen alto rendimiento en la búsqueda de resultados y sobre todo en la búsqueda de caminos.
 \end{itemize}
-%%Ejemplo de cita
-\cite{Gartner} 
 
-
-\begin{itemize}
-	\item x
-	\item y
-	\item z
-\end{itemize}
-
-\subsubsection{\textbf{A2}}
-
-EDITAR\\
-
-\subsubsection{\textbf{A3}}
-
-EDITAR\\
-
-
-%% SEGUNDA SUBSECCION
-
-\subsection{\textbf{B}}
-
-\subsubsection{\textbf{B1}}
-
-EDITAR\\
-
-%% Ejemplo de inclusión de imagen
-\begin{figure}[htb]
-	\begin{center}
-		\includegraphics[width=14cm]{./IMAGENES/basededatos_1} 
-		\caption{Incluyendo la base de datos en DevOps}
-	\end{center}
-\end{figure}
-
-\subsubsection{\textbf{B2}}
-
-EDITAR\\
-
-%% TERCERA SUBSECCION
-\subsection{\textbf{C}}
-
-\subsubsection{\textbf{C1}}
-
-EDITAR\\
-
-\begin{itemize}
-
-\item x
-\item y
-\item z
-
-\end{itemize}
-\subsubsection{\textbf{C2}}
-
-EDITAR\\
 
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
@@ -202,8 +147,6 @@ En el modelo de estructura de grafos se tienen dos tipos de elementos: los nodos
 \subsection{\textbf{Fortalezas}}
 El uso de las bases de datos orientadas a grafos puede tener ventajas en escenarios donde los sistemas a implementar requieran de una adaptación constante a los cambios de lógica de negocio, y en modelos donde existe una alta dependencia funcional entre las entidades involucradas en un sistema. \\
 
-
-Rendimiento
 El rendimiento es una fortaleza clave para el uso de bases de datos con grafos; en comparación con el uso de bases de datos relacionales, donde su rendimiento está fuertemente ligado al tamaño de los datos y las numerosas relaciones entre las entidades, implicando que el rendimiento en las consultas esté inversamente proporcional a la totalidad de los registros y relaciones envueltas entre las entidades que satisfacen la consulta, en BDOG el rendimiento tiende a permanecer  relativamente constante, ya que las consultas se realizan iniciando un recorrido desde un segmento de datos del grafo, pasando por los distintos nodos y aristas necesarios para satisfacer la consulta, dando como resultante que el tiempo de ejecución es proporcional únicamente al tamaño del grafo que se tenga que recorrer para satisfacer la consulta, no el tamaño total del grafo.
 
 En un sistema donde se presenten múltiples niveles de profundidad de los datos relacionados, se evidencia la rapidez de la ejecución de consultas en bases de datos orientadas a grafos. \\
@@ -240,6 +183,20 @@ previamente para todo el proyecto, comportándos  como nodos hijos del nodo raí
 se encuentran involucrados uno o varios ítems del product backlog representándolos como nodos hijos de los PBIS, por último, se encuentran las tareas
 como un último nivel del árbol de grafos, las cuales se representan como nodos hijos de un elemento Sprint (Figura 3).
 
+\subsection{\textbf{Casos de Uso}}
+El uso de una BDOG es una respuesta a la dificultad de representar los diversos sistemas complejos que caracterizan al mundo actual, y a la necesidad de tener un alto performance de un sistema que se encuentre involucrado en contextos con altos volúmenes y concurrencia de datos. Actualmente, las bases de datos orientadas a grafos se están aplicando en los casos descritos a continuación. \\
+
+\begin{itemize}
+\item Redes sociales: las personas o grupos corresponden a nodos en una base de datos orientada a grafos, y las formas como interactúan dichos individuos generan las distintas relaciones de los mismos permitiendo así predecir sus comportamientos.\\
+
+\item Recomendaciones: los algoritmos de recomendación establecen las relaciones entre individuos y los servicios a los que pueden estar sometidas las personas. Ya sea al momento de realizar una lectura de interés, la visualización de algún video, las compras que realice una persona o las diversas variedades de consumo de los individuos tienden a establecer un interés en algún tema en particular generando una conducta de la cual se pueden abstraer y almacenar múltiples relaciones para su posterior recomendación. \\
+
+\item Geo: las distintas operaciones geoespaciales dependen de estructuras de datos específicos, las cuales se pueden representar de una forma jerárquica; dicha representación facilita los cálculos de rutas o cualquier obtención de información entre las ubicaciones en alguna red específica tales como la de carreteras, ferroviaria o espacio aéreo. Las aplicaciones geoespaciales de las bases de datos orientadas a grafos son especialmente relevantes en las áreas de  telecomunicaciones, logística, viajes, horarios y planificación de rutas. \\
+
+\item Controles de acceso: la autorización del uso de recursos o aplicaciones por parte de los diferentes tipos de usuarios basados en sus roles en un sistema permite que dicho flujo de información pueda ser representada mediante la utilización de grafos.  \\
+
+\end{itemize}
+
 
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
@@ -251,24 +208,27 @@ como un último nivel del árbol de grafos, las cuales se representan como nodos
 
 \begin{itemize}
 
-\item Como hemos visto a lo largo del artículo, las BDOG nos ofrecen una gran versatilidad frente a otros modelos de tipos NoSQL y las recomendamos utilizar en los casos en los que se haga un principal hincapié en las relaciones de relación entre las entidades junto con un modelo de la información datos, flexible. Además, los algoritmos de búsqueda, descubrimiento de caminos cortos, exploración en anchura y profundidad que incluyen estas base de datos son temas que resultan muy interesantes seguir aprendiendo sobre ello.\\
+\item Como hemos visto a lo largo del artículo, las BDOG nos ofrecen una gran versatilidad frente a otros modelos de tipos NoSQL y las recomendamos utilizar en los casos en los que se haga un principal hincapié en las relaciones de relación entre las entidades junto con un modelo de la información datos, flexible. \\
 
 \item Las bases de datos orientadas a grafos han tenido mucho éxito en sistemas con múltiples relaciones cómo las redes o aplicaciones sociales, a su vez tienen gran adaptabilidad a modelos cambiantes. \\ 
 
 \item Las BDOG facilitan la exploración de los datos gracias a su naturaleza de estructura de grafo, permitiendo hacer recorridos por caminos cortos del grafo sin necesidad de verificar la totalidad de caminos del árbol de grafos. \\ 
 
-\item Conclusion 4 : \\ 
+\item Además, los algoritmos de búsqueda, descubrimiento de caminos cortos, exploración en anchura y profundidad que incluyen estas base de datos son temas que resultan muy interesantes seguir aprendiendo sobre ello. \\ 
 \end{itemize}
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
 
 %%  REFERENCIAS BIBLIOGRÁFICAS ------------------------------------------------------------------------------------------
 	
-	\newpage
+\section{Referencias}
 
-	\bibliographystyle{apalike} 	%ESTILO
+[1] Silberschatz, A., Korth, H. and Sudarshan, S. (1996).
+Data Models. ACM Computing Surveys, 28(1),
+105–108 \\
 
-	\bibliography{BIBLIOGRAFIA}	 
+[2] Penchikala, S. (2014). Data Modeling in Graph Databases: Interview with Jim Webber and Ian Robinson. Recuperado de http://www.infoq.com/articles/
+data-modeling-graph-databases.
 	
 %%[1] Silberschatz, A., Korth, H. and Sudarshan, S. (1996).
 %%Data Models. ACM Computing Surveys, 28(1),
