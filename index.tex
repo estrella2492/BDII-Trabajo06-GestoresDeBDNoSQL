@@ -50,9 +50,16 @@ Las bases de datos NoSQL han experimentado un importante incremento en su aplica
 
 \section{Introducción} 
 
+La bases de datos NoSQL ya no son una novedad sino una realidad que encontramos en muchas de las aplicaciones que utilizamos diaramente.
+En el pasado habiamos comentado las caracteristicas de este tipo de bases de datos y su evolucion. A direfencia de las bases de datos relacionales, las bases de datos NoSQL no responden a un unico modelo de datos. sino a un conjunto de ellos.
+En aras de favorecer la discusión y su comparación, los sistemas gestores de bases de datos NoSQL se clasifican en diferentes familias: los basados en modelos de agregación (que se pueden agrupar en clave-valor, documental o de grandes columnas) y los basados en grafo. Con este post queremos dar inicio a una serie de entradas que sirvan de tutorial a quienes quieran aprender a utilizar bases de datos NoSQL.
 
-
-
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width=14cm]{./IMAGENES/basededatos_2} 
+		\caption{Las bases de datos NoSQL en grafo permiten representar los datos utilizando estructuras de grafos.}
+	\end{center}
+\end{figure}
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -77,10 +84,32 @@ Se utilizan en entornos distribuidos que han de estar siempre disponibles y oper
 
 %% https://revistadigital.inesem.es/informatica-y-tics/los-gestores-de-bases-de-datos-mas-usados/
 
-\subsubsection{\textbf{A1}}
+\subsubsection{\textbf{Base de datos orientada a Grafos}}
 
-EDITAR\\
+Un grafo estará compuesto por dos elementos: los nodos (vértices) y las relaciones (aristas). Un nodo representa una entidad, en el que almacenaremos piezas de datos o atributos de tipo clave-valor, mientras que las relaciones representan cómo se conectan y se asocian dos nodos.\\
 
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width=14cm]{./IMAGENES/basededatos_3} 
+		\caption{Incluyendo la base de datos en DevOps}
+	\end{center}
+\end{figure}
+
+Las clasificamos como NoSQL por las siguientes características:
+\begin{itemize}
+     \item No utilizan un modelo relacional 
+     \item Carece de un esquema fijo, podemos tener nodos con diferente número de atributos.  
+     \item Mantienen la disponibilidad y acceso de la información
+     \item Son buenas en modelos en cluster
+\end{itemize}
+
+Sus características principales son:
+\begin{itemize}
+ \item Son multidimensionales, pueden almacenar atributos de diverso tamaño en los nodos
+ \item Las relaciones pueden almacenar atributos
+ \item Las relaciones pueden ser sin dirección, unidireccionales y bidireccionales lo que puede convertir la representación a grafos dirigidos, muy útiles en el cálculo de caminos.
+ \item Tienen alto rendimiento en la búsqueda de resultados y sobre todo en la búsqueda de caminos.
+\end{itemize}
 %%Ejemplo de cita
 \cite{Gartner} 
 
@@ -147,8 +176,16 @@ EDITAR\\
 
 \section{Análisis}
 
-\subsection{\textbf{Análisis 1}}
-EDITAR\\
+\subsection{\textbf{Base de datos orientada a Grafos. ¿Qué son y para qué se usan?}}
+¿Qué son las bases de datos orientadas a Grafos? Lo más probable es que hayas empezado a escuchar algo sobre este tipo de bases de datos, que si son capaces de detectar el fraude.\\
+
+¿En qué contextos las podemos usar?
+
+Las BDOG están pensadas para aquellos ámbitos en donde es importante mantener un modelo extenso y amplio de la relación de la información a la vez que un esquema flexible de los datos. Podemos ver un ejemplo claro en las redes sociales, como Twitter o Facebook, donde tenemos el número de conexiones como las relaciones con nosotros y las personas como nodos del grafo.
+
+“Las bases de datos de grafos no son nuevas, pero solventan un problema subyacente de las documentales”
+
+
 
 \subsection{\textbf{Análisis 2}}
 EDITAR\\
@@ -168,7 +205,7 @@ EDITAR\\
 
 \begin{itemize}
 
-\item Conclusion 1 : \\
+\item Como hemos visto a lo largo del artículo, las BDOG nos ofrecen una gran versatilidad frente a otros modelos de tipos NoSQL y las recomendamos utilizar en los casos en los que se haga un principal hincapié en las relaciones de relación entre las entidades junto con un modelo de la información datos, flexible. Además, los algoritmos de búsqueda, descubrimiento de caminos cortos, exploración en anchura y profundidad que incluyen estas base de datos son temas que resultan muy interesantes seguir aprendiendo sobre ello.\\
 
 \item Conclusion 2 : \\ 
 
