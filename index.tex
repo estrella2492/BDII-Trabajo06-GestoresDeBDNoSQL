@@ -53,9 +53,7 @@ Las bases de datos NoSQL han experimentado un importante incremento en su aplica
 Las bases de datos relacionales tienen una amplia aceptación en el mundo del desarrollo de software y han demostrado su efectividad en los distintos contextos en los que se ha aplicado a la hora de realizar el almacenamiento de información; sin embargo, los tiempos han cambiado y la información ha evolucionado a tal punto que los sistemas de información se tienen que encontrar con la manipulación de grandes cantidades de datos, lo cual ha resultado difícil y se han
  mplementado otras estrategias para manejar la información.
 
-Una de esas estrategias es un concepto alternativo para la gestión de bases de datos conocido como NoSql, el cual no solo utilizan el lenguaje SQL, este es un sistema de gestión enfocado a solucionar los problemas de escalabilidad y rendimiento de las bases de datos relacionales, en contextos donde el volumen de datos es alto y los sistemas sean bastante concurridos por los usuarios.
-Dependiendo de la forma en qué se almacen la información en un sistema de gestión NoSql, se pueden encontrar varios tipos diferentes de
-bases de datos, uno de ellos son las bases de datos orientadas a grafos. 
+Con la alta demanda que se requiere al momento de almacenar información y la gran capacidad que se necesita en las aplicaciones informáticas cuando se realizan consultas sobre ellas, ha generado la búsqueda de nuevas herramientas tecnológicas que ayuden a tener una mejor gestión de los datos. Recordemos que en muchas ocasiones los datos necesitan ser analizados e interpretados para convertirlos en información útil y provechosa, tal situación ha propiciado una creciente necesidad por técnicas/herramientas computacionales que nos ayuden en estas tareas. Por lo tanto, si pudiéramos representar los datos y las relaciones entre objetos como un solo conjunto de datos, podríamos generar patrones de conocimiento que describan nuestro conjunto de datos conteniendo estos elementos de manera conjunta. Para tal efecto se presentan las bases de datos en grafos que son lo suficientemente flexibles y poderosas para representar estos elementos. Se utiliza la estructura de control “grafos”.
 
 
 
@@ -68,7 +66,7 @@ bases de datos, uno de ellos son las bases de datos orientadas a grafos.
 
 %% PRIMERA SUBSECCION 
 
-\subsection {\textbf{Definición}}
+\subsection {\textbf{Base de Datos No Relacional}}
 
 Una base de datos no relacional (NoSQL) es aquella base de datos que:
 
@@ -80,21 +78,18 @@ Una base de datos no relacional (NoSQL) es aquella base de datos que:
 
 Se utilizan en entornos distribuidos que han de estar siempre disponibles y operativos y que gestionan un importante volumen de datos.
 
+
+\subsubsection{\textbf{Base de datos orientada a Grafos (BDOG)}}
+
 Una base de datos orientada a grafos es aquella que permite almacenar la información como nodos de un grafo y sus respectivas relaciones con otros nodos, permitiendo así aplicar la teoría de grafos para recorrer la base de datos; son muy útiles para guardar información en modelos con muchas relaciones como redes y conexiones sociales. 
 
-Cada nodo consta de un grado que indica el número de aristas que tiene, a su vez un grafo puede ser dirigido o no dirigido, dependiendo de
-si las aristas tienen nodos origen y nodos destino. El uso de este tipo de bases de datos depende altamente de la lógica de negocio donde se encuentre involucrada la información a almacenar, ya que no puede aplicar en todos los escenarios, o tal vez no se podría aprovechar su potencial en
-unos u otros contextos. 
+Cada nodo consta de un grado que indica el número de aristas que tiene, a su vez un grafo puede ser dirigido o no dirigido, dependiendo de si las aristas tienen nodos origen y nodos destino. El uso de este tipo de bases de datos depende altamente de la lógica de negocio donde se encuentre involucrada la información a almacenar, ya que no puede aplicar en todos los escenarios, o tal vez no se podría aprovechar su potencial en unos u otros contextos. 
 
-%% https://revistadigital.inesem.es/informatica-y-tics/los-gestores-de-bases-de-datos-mas-usados/
-
-\subsubsection{\textbf{Base de datos orientada a Grafos}}
-
-Un grafo estará compuesto por dos elementos: los nodos (vértices) y las relaciones (aristas). Un nodo representa una entidad, en el que almacenaremos piezas de datos o atributos de tipo clave-valor, mientras que las relaciones representan cómo se conectan y se asocian dos nodos.\\
+Un grafo estará compuesto por dos elementos: los nodos (vértices) y las relaciones (aristas). Un nodo representa una entidad, en el que almacenaremos piezas de datos o atributos de tipo clave-valor, mientras que las relaciones representan cómo se conectan y se asocian dos nodos.
 
 \begin{figure}[htb]
 	\begin{center}
-		\includegraphics[width=14cm]{./IMAGENES/basededatos_3} 
+		\includegraphics[width=9cm]{./IMAGENES/basededatos_3} 
 		\caption{Incluyendo la base de datos en DevOps}
 	\end{center}
 \end{figure}
@@ -116,6 +111,21 @@ Sus características principales son:
 \end{itemize}
 
 
+\subsubsection{\textbf{NEO4J}}
+Es una base de datos orientada a grafos que se compone de dos elementos fundamentales:
+\begin{itemize}
+ \item Nodos, que representan entidades con un concepto de identidad único. 
+ \item Relaciones, que representan conexiones o interacciones entre los diferentes nodos.
+\end{itemize}
+Tanto los nodos como las relaciones pueden contener propiedades, que son equivalentes a las columnas de las tablas en el modelo relacional. 
+\\ \\ La siguiente imagen muestra un ejemplo de base de datos en Neo4j:
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width=9.5cm]{./IMAGENES/ejemplo_neo4j} 
+		\caption{Arbol Grafos proceso Sprint en Scrum}
+	\end{center}
+\end{figure}
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
  
@@ -124,17 +134,6 @@ Sus características principales son:
 %% ANÁLISIS ( APLICACIÓN ) ---------------------------------------------------------------------------------------------------
 
 \section{Análisis}
-
-\subsection{\textbf{Base de datos orientada a Grafos. ¿Qué son y para qué se usan?}}
-¿Qué son las bases de datos orientadas a Grafos? Lo más probable es que hayas empezado a escuchar algo sobre este tipo de bases de datos, que si son capaces de detectar el fraude.\\
-
-¿En qué contextos las podemos usar?
-
-Las BDOG están pensadas para aquellos ámbitos en donde es importante mantener un modelo extenso y amplio de la relación de la información a la vez que un esquema flexible de los datos. Podemos ver un ejemplo claro en las redes sociales, como Twitter o Facebook, donde tenemos el número de conexiones como las relaciones con nosotros y las personas como nodos del grafo.
-
-“Las bases de datos de grafos no son nuevas, pero solventan un problema subyacente de las documentales”
-
-
 
 \subsection{\textbf{Comparación modelo relacional}}
 El modelo relacional es ampliamente conocido, se puede comprender como un conjunto de entidades que se relacionan con otras. En el proceso de modelamiento se trasladan a tablas, por lo que en práctica se diseñan tablas con columnas para representar a cada entidad y a cada relación, para esto el experto debe seguir procesos de normalización y otros procedimientos para representar el modelo de negocio teniendo presente los lineamientos y restricciones propias de las bases de datos relacionales.\\
@@ -157,23 +156,15 @@ Pensar en una aplicación de las bases de datos orientadas a grafos diferentes a
 Bajo esta premisa, se propone un uso de BDOG aplicado en el elemento Scrum Board. Esta
 propuesta consiste en una alternativa diferente al seguimiento de las tareas por Sprint en un marco de trabajo Scrum, dado que los datos bajo este contexto pueden evolucionar a medida que evoluciona el negocio y se encuentran altamente relacionados; se trata de almacenar los elementos que se encuentran involucrados durante el proceso de un Sprint en un proyecto Scrum como un árbol de grafos con raíz con cuatro niveles. Los niveles que se encuentran altamente relacionados en este proceso son:
 \begin{itemize}
-\item Proyecto: identificado por una etiqueta como
-el nombre del sistema o producto que se está
-implementando.
-\item PBI: los diferentes ítems del product backlog
-que contienen las características funcionales a
-implementar del producto.
-\item Sprint: identificador de cada uno de los Sprints
-generados para cumplir con uno o varios ítems de
-los product backlog.
-\item Tarea: compromisos adquiridos en cada Sprint,
-para satisfacer una o varias características
-funcionales establecidas en los PBI.
+\item Proyecto: identificado por una etiqueta como el nombre del sistema o producto que se está implementando.
+\item PBI: los diferentes ítems del product backlog que contienen las características funcionales a implementar del producto.
+\item Sprint: identificador de cada uno de los Sprints generados para cumplir con uno o varios ítems de los product backlog.
+\item Tarea: compromisos adquiridos en cada Sprint, para satisfacer una o varias características funcionales establecidas en los PBI.
 \end{itemize}
 
 \begin{figure}[htb]
 	\begin{center}
-		\includegraphics[width=14cm]{./IMAGENES/basededatos_4} 
+		\includegraphics[width=13cm]{./IMAGENES/basededatos_4} 
 		\caption{Arbol Grafos proceso Sprint en Scrum}
 	\end{center}
 \end{figure}
@@ -208,15 +199,18 @@ El uso de una BDOG es una respuesta a la dificultad de representar los diversos 
 
 \begin{itemize}
 
+\item  Las bases de datos orientadas a grafos son una clara alternativa a las bases de datos tradicionales, sobre todo para algunas aplicaciones sociales y web que requieren elevada escalabilidad. Estas bases de datos no son idóneas para todo, de hecho en la mayoría de los casos las bases de datos relacionales deberían seguir siendo la primera opción, debido a la capacidad de hacer JOIN y ciertas garantías que son muy importantes en algunas aplicaciones. \\ 
+
+\item Algo importante a decir es que debido al uso de las bases de datos orientadas a grafos es muy posible que las bases de datos tradicionales actuales evolucionen para incorporar capacidades NoSQL y así mejorar los motores de bases de datos obteniendo una persistencia transaccional polígota. \\ 
+
 \item Como hemos visto a lo largo del artículo, las BDOG nos ofrecen una gran versatilidad frente a otros modelos de tipos NoSQL y las recomendamos utilizar en los casos en los que se haga un principal hincapié en las relaciones de relación entre las entidades junto con un modelo de la información datos, flexible. \\
 
-\item Las bases de datos orientadas a grafos han tenido mucho éxito en sistemas con múltiples relaciones cómo las redes o aplicaciones sociales, a su vez tienen gran adaptabilidad a modelos cambiantes. \\ 
+\item Las BDOG facilitan la exploración de los datos gracias a su naturaleza de estructura de grafo, permitiendo hacer recorridos por caminos cortos del grafo sin necesidad de verificar la totalidad de caminos del árbol de grafos. Además, los algoritmos de búsqueda, descubrimiento de caminos cortos, exploración en anchura y profundidad que incluyen estas base de datos son temas que resultan muy interesantes seguir aprendiendo sobre ello.\\ 
 
-\item Las BDOG facilitan la exploración de los datos gracias a su naturaleza de estructura de grafo, permitiendo hacer recorridos por caminos cortos del grafo sin necesidad de verificar la totalidad de caminos del árbol de grafos. \\ 
 
-\item Además, los algoritmos de búsqueda, descubrimiento de caminos cortos, exploración en anchura y profundidad que incluyen estas base de datos son temas que resultan muy interesantes seguir aprendiendo sobre ello. \\ 
 \end{itemize}
 
+\newpage
 %% ----------------------------------------------------------------------------------------------------------------------------------
 
 %%  REFERENCIAS BIBLIOGRÁFICAS ------------------------------------------------------------------------------------------
@@ -230,6 +224,7 @@ Data Models. ACM Computing Surveys, 28(1),
 [2] Penchikala, S. (2014). Data Modeling in Graph Databases: Interview with Jim Webber and Ian Robinson. Recuperado de http://www.infoq.com/articles/
 data-modeling-graph-databases.
 	
+
 %%[1] Silberschatz, A., Korth, H. and Sudarshan, S. (1996).
 %%Data Models. ACM Computing Surveys, 28(1),
 %%105–108.
@@ -237,5 +232,10 @@ data-modeling-graph-databases.
 %%data-modeling-graph-databases	
 
 
+%% https://revistadigital.inesem.es/informatica-y-tics/los-gestores-de-bases-de-datos-mas-usados/
+%% http://www.rte.espol.edu.ec/index.php/tecnologica/article/view/311/359
+%% https://n9.cl/7v7f
+%% https://revistas.udistrital.edu.co/index.php/tia/article/view/8769/pdf
+%% https://ocw.unican.es/pluginfile.php/2396/course/section/2473/NoSQL_Tema2_Neo4j.pdf   <--- NEO4J
 	
 \end{document}
