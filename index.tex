@@ -29,7 +29,7 @@
 
 		\begin{abstract}
 		
-NoSQL databases have experienced a significant increase in their application in recent times. The great flexibility they offer and the possibilities they offer from the point of view of optimization in their designs according to the problem to be solved make them an attractive variant to consider for developers of information management applications. In this article, we take a look at the evolution of the types of databases until they reach the relational ones, which are analyzed in order to show the aspects associated with them that led to the emergence of the NoSQL. v
+NoSQL databases have experienced a significant increase in their application in recent times. The great flexibility they offer and the possibilities they offer from the point of view of optimization in their designs according to the problem to be solved make them an attractive variant to consider for developers of information management applications. \\ \\ This article will address the topic of graph-oriented databases (BDOG), also mentioned as an example NEO4J.
 
 		\end{abstract}
 
@@ -41,7 +41,7 @@ NoSQL databases have experienced a significant increase in their application in 
 
 \section{Resumen}
 
-Las bases de datos NoSQL han experimentado un importante incremento en su aplicación en los últimos tiempos. La gran flexibilidad que ofrecen y las posibilidades que brindan desde el punto de vista de la optimización en sus diseños de acuerdo al problema a resolver las convierten en una atractiva variante a tener en cuenta para los desarrolladores de aplicaciones de gestión de información. En el presente artículo se hace un recorrido por la evolución de los tipos de bases de datos hasta llegar a las relacionales, las cuales se analizan con el objetivo de mostrar los aspectos asociados a estas que propiciaron el surgimiento de las NoSQL.
+Las bases de datos NoSQL han experimentado un importante incremento en su aplicación en los últimos tiempos. La gran flexibilidad que ofrecen y las posibilidades que brindan desde el punto de vista de la optimización en sus diseños de acuerdo al problema a resolver las convierten en una atractiva variante a tener en cuenta para los desarrolladores de aplicaciones de gestión de información.\\ \\  En el presente artículo se abordará el tema de bases de datos orientadas a grafos (BDOG), también se mencionará como ejemplo NEO4J.
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,8 +50,7 @@ Las bases de datos NoSQL han experimentado un importante incremento en su aplica
 
 \section{Introducción} 
 
-Las bases de datos relacionales tienen una amplia aceptación en el mundo del desarrollo de software y han demostrado su efectividad en los distintos contextos en los que se ha aplicado a la hora de realizar el almacenamiento de información; sin embargo, los tiempos han cambiado y la información ha evolucionado a tal punto que los sistemas de información se tienen que encontrar con la manipulación de grandes cantidades de datos, lo cual ha resultado difícil y se han
- mplementado otras estrategias para manejar la información.
+Las bases de datos relacionales tienen una amplia aceptación en el mundo del desarrollo de software y han demostrado su efectividad en los distintos contextos en los que se ha aplicado a la hora de realizar el almacenamiento de información; sin embargo, los tiempos han cambiado y la información ha evolucionado a tal punto que los sistemas de información se tienen que encontrar con la manipulación de grandes cantidades de datos, lo cual ha resultado difícil y se han  mplementado otras estrategias para manejar la información.
 
 Con la alta demanda que se requiere al momento de almacenar información y la gran capacidad que se necesita en las aplicaciones informáticas cuando se realizan consultas sobre ellas, ha generado la búsqueda de nuevas herramientas tecnológicas que ayuden a tener una mejor gestión de los datos. Recordemos que en muchas ocasiones los datos necesitan ser analizados e interpretados para convertirlos en información útil y provechosa, tal situación ha propiciado una creciente necesidad por técnicas/herramientas computacionales que nos ayuden en estas tareas. Por lo tanto, si pudiéramos representar los datos y las relaciones entre objetos como un solo conjunto de datos, podríamos generar patrones de conocimiento que describan nuestro conjunto de datos conteniendo estos elementos de manera conjunta. Para tal efecto se presentan las bases de datos en grafos que son lo suficientemente flexibles y poderosas para representar estos elementos. Se utiliza la estructura de control “grafos”.
 
@@ -90,7 +89,7 @@ Un grafo estará compuesto por dos elementos: los nodos (vértices) y las relaci
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width=9cm]{./IMAGENES/basededatos_3} 
-		\caption{Incluyendo la base de datos en DevOps}
+		\caption{Tabla comparativa entre Base de Datos SQL y NoSQL}
 	\end{center}
 \end{figure}
 
@@ -123,13 +122,40 @@ Tanto los nodos como las relaciones pueden contener propiedades, que son equival
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width=9.5cm]{./IMAGENES/ejemplo_neo4j} 
-		\caption{Arbol Grafos proceso Sprint en Scrum}
+		\caption{Ejemplo de Base de Datos en Neo4j}
 	\end{center}
 \end{figure}
 
+Los nodos puede tener etiquetas (ninguna o varias), que se utilizan para agruparlos. En el ejemplo anterior, podríamos definir dos etiquetas: una llamada “personas” (en naranja), que asignaríamos a Laro y Valvanuz, y otra llamada “libros” (en morado), que asignaríamos al nodo restante:
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width=10.5cm]{./IMAGENES/NEO4J_ejemplo} 
+		\caption{Ejemplo de Base de Datos en Neo4j - Etiquetas}
+	\end{center}
+\end{figure}
+
+\textbf{Lenguaje de consulta y manipulación de datos: Cypher\\}
+
+Cypher es el lenguaje desarrollado por Neo4j para la creación de bases de datos así como para realizar operaciones de inserción, modificado, borrado y consulta de los datos.
+\begin{itemize}
+ \item Es un lenguaje declarativo, inspirado en SQL.
+ \item Orientado a la descripción de patrones en grafos.\\
+\end{itemize}
+
+En Cypher, los tipos de datos se dividen en dos grupos: 
+
+
+\begin{itemize}
+ \item Básicos: Booleano, Integer, Float, String, List,  Map
+ \item De estructura: Node, Relationship, Path
+\end{itemize}
+
+
+
 %% ----------------------------------------------------------------------------------------------------------------------------------
  
-
+\newpage
 
 %% ANÁLISIS ( APLICACIÓN ) ---------------------------------------------------------------------------------------------------
 
@@ -165,7 +191,6 @@ propuesta consiste en una alternativa diferente al seguimiento de las tareas por
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width=13cm]{./IMAGENES/basededatos_4} 
-		\caption{Arbol Grafos proceso Sprint en Scrum}
 	\end{center}
 \end{figure}
 
@@ -222,14 +247,16 @@ Data Models. ACM Computing Surveys, 28(1),
 105–108 \\
 
 [2] Penchikala, S. (2014). Data Modeling in Graph Databases: Interview with Jim Webber and Ian Robinson. Recuperado de http://www.infoq.com/articles/
-data-modeling-graph-databases.
-	
+data-modeling-graph-databases. \\
 
-%%[1] Silberschatz, A., Korth, H. and Sudarshan, S. (1996).
-%%Data Models. ACM Computing Surveys, 28(1),
-%%105–108.
-%%[2] Penchikala, S. (2014). Data Modeling in Graph Databases: Interview with Jim Webber and Ian Robinson. Recuperado de http://www.infoq.com/articles/
-%%data-modeling-graph-databases	
+[3] Marín, R. (2019). Los gestores de bases de datos más usados en la actualidad. Recuperado de https://revistadigital.inesem.es/informatica-y-tics/los-gestores-de-bases-de-datos-mas-usados/ \\
+
+[4] Pinilla, C. (2017). Bases de datos orientadas a grafos. Recuperado de https://revistas.udistrital.edu.co/index.php/tia/article/view/8769/pdf \\
+
+[5] Velasquez, W. (2017). Algoritmo de recomendación sensible a contexto de elementos educativos reutilizables con almacenamiento Orientado a Grafos. Recuperado de http://www.rte.espol.edu.ec/index.php/tecnologica/article/view/311/359 \\
+
+[6] Zorrilla, M. (2017). Gestores NoSQL – Neo4j. Recuperado de https://ocw.unican.es/pluginfile.php/2396/course/section/2473/NoSQL\_Tema2\_Neo4j.pdf \\
+	
 
 
 %% https://revistadigital.inesem.es/informatica-y-tics/los-gestores-de-bases-de-datos-mas-usados/
